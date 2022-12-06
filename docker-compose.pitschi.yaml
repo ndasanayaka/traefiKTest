@@ -33,7 +33,7 @@ services:
       traefik.http.routers.www.entrypoints: http
       traefik.http.routers.www.rule: HostRegexp(`www.127.0.0.1.nip.io`)
       traefik.http.routers.www.priority: 100
-      traefik.http.routers.www.middlewares: pitschi
+      traefik.http.routers.www.middlewares: pt-pages
 
   pitschi:
     image: nginx:stable
