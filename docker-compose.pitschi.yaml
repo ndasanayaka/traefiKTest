@@ -48,5 +48,5 @@ services:
       traefik.http.routers.pt-pages.rule: HostRegexp(`{host:.+}`)
       traefik.http.routers.pt-pages.priority: 2
       traefik.http.middlewares.pt-pages.errors.status: 404
-      traefik.http.middlewares.pt-pages.errors.service: pitschi
+      traefik.http.middlewares.pt-pages.errors.service: pt-pages
       traefik.http.middlewares.pt-pages.errors.query: /error.html
