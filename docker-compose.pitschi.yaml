@@ -33,7 +33,7 @@ services:
       traefik.enable: "true"
       traefik.http.services.pt-pages.loadbalancer.server.port: 80
       traefik.http.routers.pt-pages.entrypoints: http
-      traefik.http.routers.pt-pages.rule: HostRegexp(`{host:.+}`) || HostRegexp(`www.127.0.0.1.nip.io`) && Path(`/{path:.+}/`)
+      traefik.http.routers.pt-pages.rule: HostRegexp(`{host:.+}`) || HostRegexp(`www.127.0.0.1.nip.io`) && PathPrefix(`/{api:.+}/`)
       traefik.http.routers.pt-pages.priority: 1
       traefik.http.middlewares.pt-pages.errors.status: 404
       traefik.http.middlewares.pt-pages.errors.service: pt-pages
